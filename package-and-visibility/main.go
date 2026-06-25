@@ -1,12 +1,10 @@
 package main
 
 import (
-	f "fmt"
-	"math"
-	"strings"
+    "database/sql"
+	_ "github.com/lib/pq"
 )
 
 func main() {
-	f.Println(strings.ToUpper("hello"))
-	f.Println(math.Round(1506.47))
+	// We only use "database/sql" directly, but the "pq" driver is loaded in the background.
 }
