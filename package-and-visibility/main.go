@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	f "fmt"
+	"math"
+	"strings"
+)
 
 func main() {
-	fmt.Println("Hello, Go learner!")
+	f.Println(strings.ToUpper("hello"))
+	f.Println(math.Round(1506.47))
 }
