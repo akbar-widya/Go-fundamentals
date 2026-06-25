@@ -1,11 +1,24 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"errors"
+)
 
-func greet(firstName, lastName string) {
-	fmt.Printf("Hello, %s %s!\n", firstName, lastName)
+func divide(a, b float64) (float64, error) {
+	if b == 0 {
+		return 0, errors.New("division by zero")
+	}
+	return a / b, nil
 }
 
 func main() {
-	greet("Alice", "Smith")
+	result, err := divide(10, 2)	// on test b, set the second param 0
+
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}
+
+	fmt.Println("Result", result)
 }
