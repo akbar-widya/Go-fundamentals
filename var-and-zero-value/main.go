@@ -2,10 +2,14 @@ package main
 
 import "fmt"
 
-var appName = "GoLearner"
-
 func main() {
-	var isLoggedIn = true
+	var retryCount int
+	var exactTemperature float64
+	var userStatus string
+	var isVerified bool
 
-	fmt.Println(appName, "Active:", isLoggedIn)
+	fmt.Printf("Count: %d\n", retryCount)
+	fmt.Printf("Temp: %f\n", exactTemperature)
+	fmt.Printf("Status: '%s'\n", userStatus)
+	fmt.Printf("Verified: %t\n", isVerified)
 }
