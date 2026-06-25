@@ -2,10 +2,14 @@ package main
 
 import "fmt"
 
+var (
+	appName string = "GoLearner"
+	version int = 2
+)
+
+const Pi = 3.14
+
 func main() {
-	role := "admin"
-
-	x, y := 1, 2
-
-	fmt.Println("Role:", role, "| Coordinates:", x, y)
+	fmt.Println("App:", appName, "v", version)
+	fmt.Println("Pi is roughly", Pi)
 }
