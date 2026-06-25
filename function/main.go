@@ -2,19 +2,19 @@ package main
 
 import "fmt"
 
-func minMax(nums []int) (min int, max int) {
-    min = nums[0]
-	max = nums[0]
-
-	for _, n := range nums {	// n is the value from index 0, then the program is loop with the next index's value
-		if n < min { min = n }
-		if n > max { max = n }
+// You can share the return type just like regular parameters
+func divideWithRemainder(a, b int) (quotient, remainder int) {
+	if b ==0 {
+		return 0, 0
 	}
+
+	quotient = a / b	// named return type so doesn't need to do short declaration
+	remainder = a % b
+
 	return
 }
 
 func main() {
-	min, max := minMax([]int{3, 1, 4, 1, 5})
-
-	fmt.Println("Min:", min, "Max:", max)
+	q, r := divideWithRemainder(240, 7)
+	fmt.Println("Quotient:", q, "Remainder:", r)
 }
