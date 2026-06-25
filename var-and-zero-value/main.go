@@ -3,9 +3,9 @@ package main
 import "fmt"
 
 func main() {
-	var scores []int	// a slice (dynamic list)
-	var userPreferences map[string]string		// a map (key-value store)
+	role := "admin"
 
-	fmt.Println("Scores is nil:", scores == nil)
-	fmt.Println("Preferences is nil:", userPreferences == nil)
+	x, y := 1, 2
+
+	fmt.Println("Role:", role, "| Coordinates:", x, y)
 }
