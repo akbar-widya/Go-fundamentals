@@ -1,24 +1,14 @@
 package main
 
-import (
-	"fmt"
-	"errors"
-)
+import "fmt"
 
-func divide(a, b float64) (float64, error) {
-	if b == 0 {
-		return 0, errors.New("division by zero")
-	}
-	return a / b, nil
+func minMax(nums []int) (int, int) {
+    // Returning dummy data for this example
+	return nums[0], nums[1]
 }
 
 func main() {
-	result, err := divide(10, 2)	// on test b, set the second param 0
+	min, _ := minMax([]int{3, 1, 4, 1, 5})
 
-	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}
-
-	fmt.Println("Result", result)
+	fmt.Println("Min:", min)
 }
