@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
+var appName = "GoLearner"
+
 func main() {
-	var username string = "alice"
+	var isLoggedIn = true
 
-	var score int = 95
-
-	fmt.Println("User:", username, "Score:", score)
+	fmt.Println(appName, "Active:", isLoggedIn)
 }
