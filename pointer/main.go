@@ -2,17 +2,19 @@ package main
 
 import "fmt"
 
+type User struct {
+	Name string
+	Score int
+}
+
+func resetScore(u User) {
+	u.Score = 0
+}
+
 func main() {
-    regularInt := 42
+	user := User{Name: "alice", Score: 10}
 
-    // Approach 1: Declare first, assign later
-    var pointerA *int
-    pointerA = &regularInt
+	resetScore(user)
 
-    // Approach 2: Declare and assign at the same time
-    pointerB := &regularInt
-
-    // Both pointers now hold the exact same memory address
-    fmt.Println("pointerA holds:", pointerA)
-    fmt.Println("pointerB holds:", pointerB)
+	fmt.Println("Score after reset:", user.Score)
 }
