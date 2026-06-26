@@ -3,12 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	age := 25
+	score := 80
+	pointerToScore := &score
 
-	// Use the & operator to grab a variable's address, 
-	// and the * operator to read or update the data stored at that specific location.
-	var agePointer *int = &age
+	fmt.Println("Current store:", *pointerToScore)
 
-	fmt.Println("Value of age:", age)
-	fmt.Println("Memory address of age:", agePointer)
+	*pointerToScore = 200
+
+	fmt.Println("Updated score:", score, "(var score stores the real value )")
+	fmt.Println("Updated score:", *pointerToScore, "(var pointerToScore doesn't store a value, it's store a memory address of 'score'; it's connected to var store)")
 }
