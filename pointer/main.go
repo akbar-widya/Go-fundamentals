@@ -3,11 +3,10 @@ package main
 import "fmt"
 
 func main() {
-    var activeScore *int 
+	scorePointer := new(int)
 
-    fmt.Println("Pointer value:", activeScore) 	// Output: <nil>
+	fmt.Println("Initial value:", *scorePointer)
 
-	if activeScore == nil {
-        fmt.Println("No score is currently tracked.")
-    }
+	*scorePointer = 89
+	fmt.Println("Updated value:", *scorePointer)
 }
