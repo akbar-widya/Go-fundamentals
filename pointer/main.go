@@ -3,18 +3,19 @@ package main
 import "fmt"
 
 type User struct {
-	Name string
+	Name  string
 	Score int
 }
 
-func resetScore(u User) {
-	u.Score = 0
+func incrementScore(u *User) {
+	u.Score++
 }
 
 func main() {
 	user := User{Name: "alice", Score: 10}
+	fmt.Println("Score before:", user.Score)
 
-	resetScore(user)
+	incrementScore(&user)
 
-	fmt.Println("Score after reset:", user.Score)
+	fmt.Println("Score after increment:", user.Score)
 }
