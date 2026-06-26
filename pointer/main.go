@@ -2,20 +2,12 @@ package main
 
 import "fmt"
 
-type User struct {
-	Name  string
-	Score int
-}
-
-func incrementScore(u *User) {
-	u.Score++
-}
-
 func main() {
-	user := User{Name: "alice", Score: 10}
-	fmt.Println("Score before:", user.Score)
+    var activeScore *int 
 
-	incrementScore(&user)
+    fmt.Println("Pointer value:", activeScore) 	// Output: <nil>
 
-	fmt.Println("Score after increment:", user.Score)
+	if activeScore == nil {
+        fmt.Println("No score is currently tracked.")
+    }
 }
